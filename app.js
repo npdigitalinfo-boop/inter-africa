@@ -1459,6 +1459,38 @@ if (careCategoryInput) {
   });
 }
 
+// -------------------------------------------------------------
+// Hero Video Autoplay & Resilience Controller
+// -------------------------------------------------------------
+(function initHeroVideo() {
+  const video = $('.hero-video');
+  if (!video) return;
 
+  video.muted = true;
+  video.defaultMuted = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
 
+  const startPlayback = () => {
+    const p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => {
+        const unlock = () => {
+          video.play().catch(() => {});
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('touchstart', unlock);
+          window.removeEventListener('scroll', unlock);
+        };
+        window.addEventListener('click', unlock, { passive: true });
+        window.addEventListener('touchstart', unlock, { passive: true });
+        window.addEventListener('scroll', unlock, { passive: true });
+      });
+    }
+  };
 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startPlayback);
+  } else {
+    startPlayback();
+  }
+})();
