@@ -65,5 +65,14 @@ A high-performance, modern, passenger-centric web platform for **Inter Africa Bu
 
 ---
 
+
+## 🌐 Live Netlify Deployment
+
+- **Netlify Team Dashboard**: [https://app.netlify.com/teams/npdigitalinfo/projects](https://app.netlify.com/teams/npdigitalinfo/projects)
+- **Live Preview Site**: [https://scintillating-sprinkles-38fb3c.netlify.app](https://scintillating-sprinkles-38fb3c.netlify.app) *(Password during preview: My-Drop-Site)*
+- **1-Click Claim to Team**: [Claim Site on Netlify](https://app.netlify.com/drop/scintillating-sprinkles-38fb3c#drop_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3ODk1Mjg2NzgsImV4cCI6MTc4OTUzMjI3OCwiaXNzIjoiTmV0bGlmeSIsInNlc3Npb25faWQiOiI4M2VhODM3MC01YjQyLTRiYmItODQ0OS1kMTRjZjk5YzUzYWEifQ.BnYhWoAsbGDGz_OPkof1k-fMXiqUEgTXNwfslI_B2aI)
+- **Continuous Deployment**: Automated via 
+etlify.toml linked to GitHub branch main.
+
 ## 📄 License
 All rights reserved © Inter Africa Bus Services.
