@@ -6,3 +6,4 @@ Desktop.ini
 *.log
 *.tmp
 .cache/
+.netlify/
