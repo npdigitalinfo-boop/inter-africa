@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Book Inter Africa bus trips, explore routes, and request private bus hire across Zimbabwe." />
+    <meta name="theme-color" content="#0b152d" />
+    <title>Inter Africa | Travel Further. Travel Better.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a href="#top" class="brand" aria-label="Inter Africa home"><span class="brand-mark"><i></i><i></i><i></i></span><span>INTER<br /><b>AFRICA</b></span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#booking">Book a Trip</a><a href="#booking" id="nav-packages-link">Send Package 📦</a><a href="#routes">Routes</a><a href="#services">Services</a><a href="#fleet">Fleet</a><a href="#about">About Us</a><a href="#hire">Private Hire</a><a href="#locations">Contact</a>
+      </nav>
+      <div class="head-actions"><a href="#booking" class="button button-small">Book now <span>↗</span></a><button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-image"><video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Inter Africa buses travelling on the highway"><source src="06%20November%202024%20-%20Inter%20Africa%20Buses%20Official%20%281080p%2C%20h264%29.mp4" type="video/mp4" /></video></div>
+        <div class="route-lines" aria-hidden="true"><svg viewBox="0 0 600 300"><path d="M-10 252C118 271 87 68 245 131S434 56 622 13"/><circle cx="245" cy="131" r="6"/><circle cx="441" cy="71" r="6"/></svg></div>
+        <div class="hero-content contain">
+          <div class="eyebrow light"><span></span> Zimbabwe, connected</div>
+          <h1>Travel further.<br /><em>Travel better.</em></h1>
+          <p>Reliable bus transportation, private hire and fleet services across Zimbabwe.</p>
+          <div class="hero-actions"><a class="button button-accent" href="#booking">Book a trip <span>↗</span></a><a class="text-link light" href="#hire">Request private hire <span>→</span></a></div>
+        </div>
+        <div class="hero-bottom contain"><div class="hero-note"><span class="pulse"></span> Booking made simple</div><div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div></div>
+      </section>
+
+      <section class="booking-wrap contain" id="booking" aria-labelledby="booking-title">
+        <div class="advisory-bar" role="region" aria-label="Live Travel Advisory and Delay Announcements">
+          <div class="advisory-left">
+            <span class="live-pill"><span class="pulse red"></span> LIVE TRAVEL ADVISORY</span>
+            <div class="advisory-message" id="advisory-ticker">
+              <strong>Notice:</strong> Harare – Bulawayo coaches experiencing ~20 min delay due to roadworks near Gweru. Mutare &amp; Masvingo routes on schedule.
+            </div>
+          </div>
+          <div class="advisory-actions">
+            <button type="button" class="announcement-audio-btn" id="play-announcement-btn" aria-label="Listen to audio announcement">
+              <span class="speaker-icon">🔊</span> <span>Listen announcement</span>
+            </button>
+            <button type="button" class="noticeboard-toggle-btn" id="toggle-noticeboard-btn" aria-expanded="false" aria-controls="network-noticeboard">
+              <span>Road challenges &amp; notices</span> ▾
+            </button>
+          </div>
+        </div>
+
+        <div id="network-noticeboard" class="network-noticeboard" hidden>
+          <div class="noticeboard-header">
+            <h3><span>⚠️</span> Inter Africa Live Network Bulletin &amp; Challenges</h3>
+            <span class="noticeboard-time" id="noticeboard-timestamp">Live status · Monitored 24/7</span>
+          </div>
+          <div class="noticeboard-grid">
+            <div class="notice-card warning">
+              <div class="notice-card-tag">Roadworks Alert</div>
+              <h4>Harare – Bulawayo Highway (A5)</h4>
+              <p>Road resurfacing works between Gweru and Kwekwe. Expect 15–25 minute delays on morning and afternoon services. Vehicle tracking is active across all coaches.</p>
+            </div>
+            <div class="notice-card caution">
+              <div class="notice-card-tag">Weather Advisory</div>
+              <h4>Eastern Highlands &amp; Mutare Highway (A3)</h4>
+              <p>Morning mist around Christmas Pass with reduced visibility. Drivers are adhering to safe wet-weather speeds. All services currently on schedule.</p>
+            </div>
+            <div class="notice-card info">
+              <div class="notice-card-tag">Operational Support</div>
+              <h4>Masvingo &amp; Chiredzi Routes</h4>
+              <p>Normal schedules operating. 24/7 breakdown recovery and backup luxury coaches stationed at Harare and Masvingo depots.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <div class="booking-tabs" role="tablist" aria-label="Booking mode">
+            <button type="button" class="booking-tab active" id="tab-passengers" role="tab" aria-selected="true" aria-controls="passenger-panel">
+              <span class="tab-icon">🚌</span> <span>Passenger Tickets</span>
+            </button>
+            <button type="button" class="booking-tab" id="tab-packages" role="tab" aria-selected="false" aria-controls="package-panel">
+              <span class="tab-icon">📦</span> <span>Send a Package</span> <span class="tab-pill">Bus Courier</span>
+            </button>
+          </div>
+
+          <!-- Passenger Tickets Panel -->
+          <div id="passenger-panel" class="booking-tab-panel active" role="tabpanel" aria-labelledby="tab-passengers">
+            <div class="booking-title"><p class="eyebrow"><span></span> Plan your journey</p><h2 id="booking-title">Where are you going?</h2></div>
+            <form class="booking-form" id="trip-form">
+              <label><span>From</span><select id="from-city" required aria-label="Departure city"><option value="">Choose departure</option><option value="Harare">Harare</option><option value="Bulawayo">Bulawayo</option><option value="Mutare">Mutare</option><option value="Masvingo">Masvingo</option><option value="Chiredzi">Chiredzi</option><option value="Gweru">Gweru</option></select></label>
+              <button type="button" class="swap" aria-label="Swap departure and destination">⇄</button>
+              <label><span>To</span><select id="to-city" required aria-label="Destination city"><option value="">Choose destination</option><option value="Harare">Harare</option><option value="Bulawayo">Bulawayo</option><option value="Mutare">Mutare</option><option value="Masvingo">Masvingo</option><option value="Chiredzi">Chiredzi</option><option value="Gweru">Gweru</option></select></label>
+              <label><span>Travel date</span><input id="travel-date" type="date" required aria-label="Travel date" /></label>
+              <label><span>Passengers</span><select id="passengers-count" aria-label="Passengers"><option value="1">1 passenger</option><option value="2">2 passengers</option><option value="3">3 passengers</option><option value="4">4 passengers</option><option value="5">5 passengers</option></select></label>
+              <button class="button button-dark" type="submit">Search buses <span>→</span></button>
+            </form>
+
+            <!-- Passenger Care Options Bar -->
+            <div class="passenger-options-bar">
+              <label class="toggle-option-card" id="card-toggle-young">
+                <input type="checkbox" id="toggle-young-passenger" />
+                <span class="toggle-switch"></span>
+                <div class="toggle-text">
+                  <strong>🧒 Young Passengers (Ages 5–12)</strong>
+                  <small>Children traveling with family, 20% child discount, or unaccompanied minors</small>
+                </div>
+              </label>
+              <label class="toggle-option-card" id="card-toggle-care">
+                <input type="checkbox" id="toggle-special-care" />
+                <span class="toggle-switch"></span>
+                <div class="toggle-text">
+                  <strong>♿ Special Care Assistance</strong>
+                  <small>Seniors (65+), expectant mothers, wheelchair access &amp; priority baggage aid</small>
+                </div>
+              </label>
+            </div>
+
+            <!-- Expandable Young Passenger Details Panel -->
+            <div id="young-passenger-details" class="option-details-panel young-panel" hidden>
+              <div class="option-panel-header">
+                <div class="option-title">
+                  <span class="badge-pill young">Young Passenger Care Protocol</span>
+                  <h4>Child Travel Details (Ages 5–12)</h4>
+                </div>
+                <span class="option-badge discount-badge">🎉 20% Child Fare Discount (Ages 5–12)</span>
+              </div>
+              <div class="option-grid">
+                <label>
+                  <span>Child Travel Status</span>
+                  <select id="young-travel-type">
+                    <option value="accompanied">Traveling with Parent / Adult Guardian</option>
+                    <option value="unaccompanied">Unaccompanied Minor (Driver / Host Handover)</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Young Passengers Count</span>
+                  <select id="young-count">
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                    <option value="4">4 Children</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Child Age(s) (5–12 yrs)</span>
+                  <input id="young-ages" placeholder="e.g. 7, 10 years" value="8" />
+                </label>
+                <label>
+                  <span>Preferred Seating</span>
+                  <select id="young-seating">
+                    <option value="front-cabin">Front Cabin (Near Driver &amp; Conductor)</option>
+                    <option value="window">Window Seat for Sightseeing</option>
+                    <option value="family-group">Family Group Together</option>
+                  </select>
+                </label>
+              </div>
+
+              <!-- Unaccompanied Minor Guardian Contacts -->
+              <div id="unaccompanied-fields" class="unaccompanied-grid" hidden>
+                <div class="guardian-card">
+                  <b>Departure Handover Guardian (At Origin Depot)</b>
+                  <div class="guardian-inputs">
+                    <input id="dep-guardian-name" placeholder="Departure Guardian Full Name" />
+                    <input id="dep-guardian-phone" type="tel" placeholder="Departure Guardian Phone (07...)" />
+                  </div>
+                </div>
+                <div class="guardian-card">
+                  <b>Destination Receiving Guardian (At Arrival Depot)</b>
+                  <div class="guardian-inputs">
+                    <input id="arr-guardian-name" placeholder="Receiving Guardian Full Name" />
+                    <input id="arr-guardian-phone" type="tel" placeholder="Receiving Guardian Phone (07...)" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-notice">
+                <span>🛡️</span>
+                <div>
+                  <strong>Inter Africa Child Safety Promise:</strong>
+                  Children traveling unaccompanied are seated directly in the front cabin, supervised throughout the journey by our onboard conductor, and only handed over to the authorized receiving guardian after verifying their National ID / Passport.
+                </div>
+              </div>
+            </div>
+
+            <!-- Expandable Special Care Details Panel -->
+            <div id="special-care-details" class="option-details-panel care-panel" hidden>
+              <div class="option-panel-header">
+                <div class="option-title">
+                  <span class="badge-pill care">Accessibility &amp; Compassionate Care</span>
+                  <h4>Special Care &amp; Boarding Assistance</h4>
+                </div>
+                <span class="option-badge free-badge">✓ Free Priority Staff Service</span>
+              </div>
+              <div class="option-grid">
+                <label>
+                  <span>Assistance Category</span>
+                  <select id="care-category">
+                    <option value="elderly">Senior Citizen (65+) — Easy Step Boarding</option>
+                    <option value="pregnant">Expectant Mother — Extra Comfort &amp; Legroom</option>
+                    <option value="wheelchair">Wheelchair / Reduced Mobility</option>
+                    <option value="medical">Medical Condition / Medication Cooling</option>
+                    <option value="sensory">Visual or Hearing Impairment</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Luggage &amp; Boarding Assistance</span>
+                  <select id="care-luggage-aid">
+                    <option value="full-assistance">Full Baggage Escort &amp; Boarding Aid by Depot Crew</option>
+                    <option value="mobility-aid-stow">Wheelchair / Walking Frame Stowed in Front Bay</option>
+                    <option value="seat-help-only">Coach Step &amp; Seat Assistance Only</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Accessible Seating</span>
+                  <select id="care-seating">
+                    <option value="row-1-2">Row 1 &amp; 2 Priority Accessible Front Seats</option>
+                    <option value="entrance-aisle">Aisle Seat Adjacent to Main Door</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Traveling with Caregiver / Companion?</span>
+                  <select id="care-companion">
+                    <option value="no">Traveling Independently (Needs Inter Africa Staff Care)</option>
+                    <option value="yes">Traveling with Family Companion / Caregiver</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="care-notes-row">
+                <label class="care-desc-field">
+                  <span>Specific Medical or Mobility Notes (Optional)</span>
+                  <input id="care-notes" placeholder="e.g. Needs assistance on coach steps, carrying walking stick, 6-months pregnant, requires front seat" />
+                </label>
+              </div>
+
+              <div class="option-notice">
+                <span>♿</span>
+                <div>
+                  <strong>Inter Africa Accessibility Commitment:</strong>
+                  Front-row priority accessible seating is reserved for special care passengers, and our depot crew will carry all your heavy baggage directly from the terminal to the coach at zero extra cost.
+                </div>
+              </div>
+            </div>
+
+            <div id="search-results" class="search-results" hidden aria-live="polite"></div>
+          </div>
+
+          <!-- Package / Parcel Dispatch Panel -->
+          <div id="package-panel" class="booking-tab-panel" role="tabpanel" aria-labelledby="tab-packages" hidden>
+            <div class="booking-title">
+              <div>
+                <p class="eyebrow"><span></span> Inter Africa Cargo &amp; Parcel Express</p>
+                <h2>Send packages on our scheduled buses</h2>
+              </div>
+              <p class="panel-subtitle">Fast, reliable depot-to-depot freight delivery across Zimbabwe on daily departures.</p>
+            </div>
+            <form class="package-form" id="package-form">
+              <div class="pkg-route-row">
+                <label><span>Origin Depot</span><select id="pkg-from-city" required aria-label="Origin depot"><option value="">Select origin depot</option><option value="Harare">Harare Depot (Waterfalls)</option><option value="Bulawayo">Bulawayo Depot (Kelvin West)</option><option value="Mutare">Mutare Depot (Nyakamete)</option><option value="Masvingo">Masvingo Depot (Minerals Rd)</option><option value="Chiredzi">Chiredzi Depot</option><option value="Gweru">Gweru Depot</option></select></label>
+                <button type="button" class="swap" id="pkg-swap" aria-label="Swap origin and destination depots">⇄</button>
+                <label><span>Destination Depot</span><select id="pkg-to-city" required aria-label="Destination depot"><option value="">Select destination depot</option><option value="Harare">Harare Depot (Waterfalls)</option><option value="Bulawayo">Bulawayo Depot (Kelvin West)</option><option value="Mutare">Mutare Depot (Nyakamete)</option><option value="Masvingo">Masvingo Depot (Minerals Rd)</option><option value="Chiredzi">Chiredzi Depot</option><option value="Gweru">Gweru Depot</option></select></label>
+                <label><span>Dispatch date</span><input id="pkg-date" type="date" required aria-label="Dispatch date" /></label>
+              </div>
+
+              <div class="pkg-specs-row">
+                <label><span>Package category</span><select id="pkg-category" required aria-label="Package category"><option value="envelope">📄 Documents / Envelope (&lt; 2kg) — from $3</option><option value="small_box" selected>📦 Small Box / Bag (2 – 5kg) — from $5</option><option value="medium_box">🧳 Medium Box / Luggage (5 – 15kg) — from $8</option><option value="heavy_cargo">🎒 Heavy Sacks / Cargo (15 – 30kg) — from $12</option><option value="bulk_commercial">🚛 Commercial Bulk Cargo (30 – 50kg) — from $18</option></select></label>
+                <label><span>Est. Weight (kg)</span><input id="pkg-weight" type="number" min="0.5" max="60" step="0.5" value="4" placeholder="e.g. 4" aria-label="Estimated weight in kg" /></label>
+                <label class="pkg-checkbox-label"><input type="checkbox" id="pkg-fragile" /> <span>⚠️ Fragile / Handle with care</span></label>
+              </div>
+
+              <div class="pkg-parties-grid">
+                <div class="pkg-party-box">
+                  <div class="pkg-party-title"><b>Sender Details</b> (Drop-off)</div>
+                  <div class="pkg-party-inputs">
+                    <input id="pkg-sender-name" placeholder="Sender full name" required aria-label="Sender full name" />
+                    <input id="pkg-sender-phone" type="tel" placeholder="Sender phone number (07...)" required aria-label="Sender phone number" />
+                  </div>
+                </div>
+                <div class="pkg-party-box">
+                  <div class="pkg-party-title"><b>Recipient Details</b> (Depot Collection)</div>
+                  <div class="pkg-party-inputs">
+                    <input id="pkg-receiver-name" placeholder="Recipient full name" required aria-label="Recipient full name" />
+                    <input id="pkg-receiver-phone" type="tel" placeholder="Recipient phone number (07...)" required aria-label="Recipient phone number" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="pkg-action-row">
+                <label class="pkg-desc-field"><span>Package contents / description</span><input id="pkg-description" placeholder="e.g. Sealed legal documents, auto spares, boxed garments" required aria-label="Package contents description" /></label>
+                <button class="button button-accent pkg-submit-btn" type="submit">Calculate freight &amp; bus times <span>→</span></button>
+              </div>
+            </form>
+            <div id="package-results" class="search-results" hidden aria-live="polite"></div>
+          </div>
+        </div>
+        <p class="booking-help">Need help booking or dispatching a package? <a href="https://wa.me/263736009688" target="_blank" rel="noreferrer">Talk to us on WhatsApp ↗</a></p>
+      </section>
+
+      <section class="trust-section" id="about">
+        <div class="contain trust-grid"><div class="trust-intro"><p class="eyebrow"><span></span> Built for the road ahead</p><h2>More than a journey.<br /><em>A better way to move.</em></h2><a href="#services" class="text-link">Discover Inter Africa <span>→</span></a></div><div class="stat-list"><div><strong>600<span>+</span></strong><p>Buses in our diversified fleet</p></div><div><strong>45<span>+</span></strong><p>Routes across Zimbabwe and beyond</p></div><div><strong>900<span>+</span></strong><p>People dedicated to your comfort</p></div></div></div>
+        <div class="feature-ribbon contain"><span><b>◉</b> Vehicle tracking</span><span><b>⌁</b> Starlink Wi‑Fi</span><span><b>🧒</b> Youth Travel Care</span><span><b>♿</b> Accessible Seating</span><span><b>📦</b> Bus Parcel Express</span><span><b>✦</b> Luxury coaches</span></div>
+      </section>
+
+      <section class="routes-section contain" id="routes">
+        <div class="section-head"><div><p class="eyebrow"><span></span> Go places</p><h2>Popular routes,<br /><em>made easy.</em></h2></div><p>Find a trip that works around your day. Search routes, check availability and book when you’re ready.</p></div>
+        <div class="routes-layout"><div class="route-cards"><article class="route-card active" data-from="Harare" data-to="Chiredzi"><div class="route-number">01</div><div class="route-city"><span>HAR</span><i></i><span>CHI</span></div><p>Harare <span>→</span> Chiredzi</p><a href="#booking" aria-label="Book Harare to Chiredzi">Book this route <span>↗</span></a></article><article class="route-card" data-from="Harare" data-to="Bulawayo"><div class="route-number">02</div><div class="route-city"><span>HAR</span><i></i><span>BUL</span></div><p>Harare <span>→</span> Bulawayo</p><a href="#booking" aria-label="Book Harare to Bulawayo">Book this route <span>↗</span></a></article><article class="route-card" data-from="Harare" data-to="Mutare"><div class="route-number">03</div><div class="route-city"><span>HAR</span><i></i><span>MUT</span></div><p>Harare <span>→</span> Mutare</p><a href="#booking" aria-label="Book Harare to Mutare">Book this route <span>↗</span></a></article></div><div class="map-panel" aria-label="Zimbabwe map showing key Inter Africa route destinations"><svg class="route-map" viewBox="0 0 500 350" role="img" aria-label="Zimbabwe with Harare, Bulawayo, Mutare, Masvingo and Chiredzi positioned geographically"><path class="country" d="M73 79 146 47l57 24 65-27 53 28 80-3 23 45-20 37 39 36-49 45-5 42-64 10-65-17-54 30-55-35-54-9-12-45-35-40 28-42-1-67z"/><path class="road-base" d="M304 103C283 136 255 158 225 179S166 219 143 245M304 103C341 115 376 141 412 178M304 103C294 149 280 194 262 239S293 278 312 293"/><path class="network" d="M304 103C283 136 255 158 225 179S166 219 143 245M304 103C294 149 280 194 262 239S293 278 312 293M304 103C341 115 376 141 412 178"/><g class="town"><circle cx="304" cy="103" r="7"/><text x="314" y="98">HARARE</text></g><g class="town"><circle cx="143" cy="245" r="6"/><text x="92" y="264">BULAWAYO</text></g><g class="town"><circle cx="412" cy="178" r="6"/><text x="421" y="173">MUTARE</text></g><g class="town"><circle cx="262" cy="239" r="6"/><text x="270" y="256">MASVINGO</text></g><g class="town"><circle cx="312" cy="293" r="6"/><text x="321" y="309">CHIREDZI</text></g><g class="minor-town"><circle cx="225" cy="179" r="3"/><text x="194" y="172">GWERU</text></g></svg><div class="map-title">KEY DESTINATIONS</div><div class="map-key"><span></span> Routes shown · search for live availability</div></div></div>
+        <a class="button button-outline" href="#booking">Explore all routes <span>→</span></a>
+      </section>
+
+      <section class="why-section"><div class="contain why-grid"><div class="why-image" role="img" aria-label="Inter Africa Luxury Coach bus"></div><div class="why-copy"><p class="eyebrow light"><span></span> The Inter Africa standard</p><h2>Every mile, <em>looked after.</em></h2><p>From the seat you choose to the support you receive, we bring care and professionalism to every part of your journey.</p><div class="why-points"><div><b>01</b><span><strong>Travel with confidence</strong><small>Vehicle tracking supports safety and visibility on the road.</small></span></div><div><b>02</b><span><strong>Comfort comes standard</strong><small>Stay connected with Wi‑Fi and USB charging on every journey.</small></span></div><div><b>03</b><span><strong>Support when you need it</strong><small>Our team is available every day from 6:00 AM to 8:00 PM.</small></span></div></div></div></div></section>
+
+      <section class="fleet-section contain" id="fleet"><div class="section-head"><div><p class="eyebrow"><span></span> Our fleet</p><h2>Ready for every<br /><em>kind of journey.</em></h2></div><a href="#hire" class="text-link">Find the right bus <span>→</span></a></div><div class="fleet-grid"><article class="fleet-card fleet-one" role="img" aria-label="Inter Africa intercity coach interior with comfort seating"><div class="fleet-overlay"><p>01 — Scheduled travel</p><h3>Intercity coaches</h3><span>Comfort-led journeys across Zimbabwe</span></div></article><article class="fleet-card fleet-two" role="img" aria-label="Inter Africa private hire bus for group travel"><div class="fleet-overlay"><p>02 — Group travel</p><h3>Private hire</h3><span>For teams, tours and special occasions</span></div></article><article class="fleet-card fleet-three" role="img" aria-label="Inter Africa city bus for local transport"><div class="fleet-overlay"><p>03 — Local transport</p><h3>City buses</h3><span>Moving major towns in partnership with ZUPCO</span></div></article></div><p class="fleet-note">Our fleet is diversified to serve scheduled routes, local transportation and group travel. <a href="#hire">Talk to our hire team →</a></p></section>
+
+      <section class="services-section" id="services"><div class="contain"><div class="section-head"><div><p class="eyebrow light"><span></span> Beyond the booking</p><h2>Transport, <em>in motion.</em></h2></div><p>Whatever brings people together, our transport services are designed to get them there.</p></div><div class="service-grid"><article><span class="service-no">01</span><div class="service-icon">↗</div><h3>Public transportation</h3><p>Reliable scheduled travel with comfortable buses, online booking and a network built to connect Zimbabwe.</p><a href="#routes">Explore routes <span>→</span></a></article><article><span class="service-no">02</span><div class="service-icon">◎</div><h3>Corporate &amp; private hire</h3><p>A flexible group-travel solution for corporate travel, schools, churches, weddings, tours and events.</p><a href="#hire">Request a bus <span>→</span></a></article><article><span class="service-no">03</span><div class="service-icon">⌘</div><h3>Workshop services</h3><p>Vehicle service, preventive maintenance and repairs backed by a trained professional workshop team.</p><a href="#locations">Enquire about maintenance <span>→</span></a></article><article><span class="service-no">04</span><div class="service-icon">⌖</div><h3>Local buses</h3><p>Local transportation in major towns, operating in partnership with ZUPCO.</p><a href="#locations">Learn more <span>→</span></a></article></div></div></section>
+
+      <section class="tech-section contain"><div class="tech-copy"><p class="eyebrow"><span></span> Smart travel</p><h2>Technology that<br /><em>keeps you moving.</em></h2><p>Vehicle tracking supports safer journeys, better visibility and more responsive operational management—today and as we grow.</p><a href="#booking" class="button button-dark">Plan your journey <span>→</span></a></div><div class="dashboard-visual" aria-label="Vehicle tracking dashboard concept"><div class="dash-top"><span>LIVE FLEET VIEW</span><b>● ONLINE</b></div><div class="dash-map"><svg viewBox="0 0 360 245"><path d="M0 178C51 121 56 197 116 155s45-105 98-75 71-33 146-62"/><path d="M21 29 73 79l-22 41 76 58 65-22 38 63 92-27"/><circle cx="116" cy="155" r="8"/><circle cx="212" cy="80" r="7"/><circle cx="290" cy="122" r="7"/></svg><div class="bus-pin">● <small>IA-241</small></div><div class="dash-city">HARARE</div></div><div class="dash-bottom"><div><small>ACTIVE VEHICLES</small><strong>600<span>+</span></strong></div><div><small>NETWORK STATUS</small><strong>Connected</strong></div></div></div></section>
+
+      <section class="how-section contain"><div class="section-head"><div><p class="eyebrow"><span></span> Booking made simple</p><h2>From search to seat<br /><em>in a few simple steps.</em></h2></div></div><ol class="steps"><li><span>01</span><div><h3>Search your route</h3><p>Choose departure, destination and travel date.</p></div></li><li><span>02</span><div><h3>Choose your trip</h3><p>Compare available buses and departure times.</p></div></li><li><span>03</span><div><h3>Select your seat</h3><p>Choose your preferred available seat.</p></div></li><li><span>04</span><div><h3>Complete booking</h3><p>Enter passenger information and payment details.</p></div></li><li><span>05</span><div><h3>Travel</h3><p>Receive your confirmation and travel information.</p></div></li></ol></section>
+
+      <section class="testimonials"><div class="contain"><p class="eyebrow"><span></span> Passenger stories</p><div class="quote">“I had the best journey to and from Chiredzi from Harare on an Inter Africa bus.”</div><div class="quote-by"><span></span><b>Tinashe Sithole</b><small>Inter Africa passenger</small><div class="quote-controls"><button aria-label="Previous testimonial">←</button><button aria-label="Next testimonial">→</button></div></div></div></section>
+
+      <section class="hire-section" id="hire">
+        <div class="contain hire-layout">
+          <div class="hire-copy">
+            <p class="eyebrow light"><span></span> Make it yours</p>
+            <h2>Moving a group?<br /><em>We’re ready.</em></h2>
+            <p>Tell us what you need. From school trips to corporate transport and weddings, we deliver comfortable, fully-managed charter travel across Zimbabwe.</p>
+            <div class="hire-tags">
+              <span>Corporate travel</span>
+              <span>School excursions</span>
+              <span>Church pilgrimages</span>
+              <span>Weddings &amp; VIP</span>
+              <span>Tourism &amp; tours</span>
+            </div>
+            <div class="hire-trust-mini">
+              <div class="hire-trust-item">
+                <b>✓ 100% All-Inclusive</b>
+                <small>Fuel, toll gates &amp; professional driver allowance included</small>
+              </div>
+              <div class="hire-trust-item">
+                <b>✓ Insured &amp; VID Compliant</b>
+                <small>Full passenger liability &amp; real-time GPS satellite tracking</small>
+              </div>
+              <div class="hire-trust-item">
+                <b>✓ 24/7 Depot Backup</b>
+                <small>Standby coaches ready at Harare, Bulawayo, Mutare &amp; Masvingo</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hire-card-wrap">
+            <form class="hire-form" id="hire-form">
+              <div class="form-heading">
+                <span>PRIVATE BUS CHARTER ENQUIRY</span>
+                <b>Step <em id="step-count">1</em> / 3</b>
+              </div>
+              <div class="form-progress"><i></i></div>
+
+              <!-- Step 1: The Route & Bus -->
+              <div class="form-step active">
+                <h3>Where is your group headed?</h3>
+                <div class="hire-type-pills">
+                  <label class="hire-pill-radio"><input type="radio" name="trip_type" value="one-way" checked /> <span>One-Way Transfer</span></label>
+                  <label class="hire-pill-radio"><input type="radio" name="trip_type" value="return" /> <span>Return / Round Trip</span></label>
+                </div>
+                <div class="form-row">
+                  <label>Pickup location / City<input id="hire-pickup" required placeholder="e.g. Harare CBD / Airport" /></label>
+                  <label>Destination<input id="hire-dest" required placeholder="e.g. Bulawayo / Nyanga / Vic Falls" /></label>
+                </div>
+                <div class="form-row">
+                  <label>Departure date<input id="hire-date" type="date" required /></label>
+                  <label id="hire-return-date-wrap" style="display:none;">Return date<input id="hire-return-date" type="date" /></label>
+                  <label>Passengers<input id="hire-passengers" type="number" min="5" max="75" value="35" required placeholder="e.g. 35" /></label>
+                </div>
+                <label>Bus type preference
+                  <select id="hire-bus-pref">
+                    <option value="auto">✨ Recommend best bus for my group size</option>
+                    <option value="sprinter">18-Seater Sprinter Coach (Executive &amp; Agile)</option>
+                    <option value="midi">35-Seater Midi Luxury Coach (A/C, USB &amp; Reclining)</option>
+                    <option value="flagship">55–65 Seater Flagship Coach (Restroom, Starlink Wi-Fi &amp; TV)</option>
+                  </select>
+                </label>
+              </div>
+
+              <!-- Step 2: Comfort, Care & Occasion -->
+              <div class="form-step">
+                <h3>Comfort &amp; trip details</h3>
+                <label>Trip occasion / purpose
+                  <select id="hire-purpose" required>
+                    <option value="">Select occasion</option>
+                    <option value="wedding">Wedding or Celebration (Decorations Permitted)</option>
+                    <option value="school">School / University Educational Tour</option>
+                    <option value="corporate">Corporate Retreat / Conference / Airport Shuttle</option>
+                    <option value="church">Church / Faith Pilgrimage Gathering</option>
+                    <option value="tour">Tourism / Holiday / Safari Tour</option>
+                    <option value="funeral">Family / Memorial Gathering</option>
+                  </select>
+                </label>
+                <div class="hire-care-checks">
+                  <label class="hire-check-item">
+                    <input type="checkbox" id="hire-care-young" />
+                    <span>🧒 Traveling with Young Passengers (Ages 5–12)</span>
+                  </label>
+                  <label class="hire-check-item">
+                    <input type="checkbox" id="hire-care-special" />
+                    <span>♿ Need Special Care / Accessibility (Seniors, Wheelchair, Luggage help)</span>
+                  </label>
+                </div>
+                <label>Special requests or itinerary stops
+                  <textarea id="hire-notes" placeholder="e.g. Multiple pickup points in Harare, need trailer for camping luggage, 3-day stay in Victoria Falls"></textarea>
+                </label>
+              </div>
+
+              <!-- Step 3: Contact Details -->
+              <div class="form-step">
+                <h3>Where should we send your quote?</h3>
+                <label>Contact person full name<input id="hire-name" required placeholder="Enter full name" /></label>
+                <div class="form-row">
+                  <label>WhatsApp / Phone number<input id="hire-phone" required type="tel" placeholder="+263 7..." /></label>
+                  <label>Email address<input id="hire-email" required type="email" placeholder="you@example.com" /></label>
+                </div>
+                <div class="hire-fast-promise">
+                  ⚡ <strong>Instant Quote Guarantee:</strong> Submitting will immediately generate your estimated charter rate, bus specs, photos, and policies on screen, with a formal WhatsApp booking proposal!
+                </div>
+              </div>
+
+              <div class="form-controls">
+                <button type="button" class="back-button">Back</button>
+                <button type="button" class="button button-accent next-button">Continue <span>→</span></button>
+                <button type="submit" class="button button-accent submit-button">Get Instant Quote for Private Bus <span>→</span></button>
+              </div>
+            </form>
+
+            <!-- Instant Proposal & Quote Container (Appears immediately upon submission) -->
+            <div id="hire-proposal-container" class="hire-proposal-card" hidden aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="locations contain" id="locations"><div class="section-head"><div><p class="eyebrow"><span></span> Find us</p><h2>Here when you<br /><em>need us.</em></h2></div><div class="locations-contact"><a href="tel:+26342004110">+263 4 2004110/1</a><a href="mailto:info@interafrica.co.zw">info@interafrica.co.zw</a><p>Customer support: Monday–Sunday, 6:00 AM–8:00 PM</p></div></div><div class="depot-grid"><article><b>01</b><h3>Harare Depot</h3><p>1745 Prospect Way,<br />Waterfalls, Harare</p><a href="tel:+263736009688">0736009688</a></article><article><b>02</b><h3>Bulawayo Depot</h3><p>15281 Kelvin West,<br />Bulawayo</p><a href="tel:+2639400685">(09) 400685</a></article><article><b>03</b><h3>Mutare Depot</h3><p>10773 St Helens Drive,<br />Nyakamete Industrial Area</p><a href="tel:+263784918218">0784918218</a></article><article><b>04</b><h3>Masvingo Depot</h3><p>1014/2 Minerals Road,<br />Masvingo</p><a href="tel:+26339262140">(039) 262140</a></article></div></section>
+
+      <section class="final-cta"><div class="contain"><p class="eyebrow light"><span></span> Your next trip starts here</p><h2>Let’s get you<br /><em>moving.</em></h2><a href="#booking" class="button button-accent">Book your trip <span>↗</span></a></div></section>
+    </main>
+
+    <footer><div class="contain footer-top"><a href="#top" class="brand footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>INTER<br /><b>AFRICA</b></span></a><p>Zimbabwe’s leading bus service, connecting people and places with care.</p><div class="footer-links"><div><b>Explore</b><a href="#booking">Book a trip</a><a href="#routes">Routes</a><a href="#fleet">Our fleet</a></div><div><b>Services</b><a href="#services">Public travel</a><a href="#hire">Private hire</a><a href="#services">Workshop services</a></div><div><b>Support</b><a href="#locations">Contact us</a><a href="#locations">Our depots</a><a href="https://wa.me/263736009688">WhatsApp</a></div></div></div><div class="contain footer-bottom"><span>© 2026 Inter Africa Bus Services</span><div><a href="#">Privacy policy</a><a href="#">Terms &amp; conditions</a><a href="#">Disclaimer</a></div></div></footer>
+    <a class="whatsapp" href="https://wa.me/263736009688" target="_blank" rel="noreferrer" aria-label="Chat with Inter Africa on WhatsApp">◔<span>WhatsApp us</span></a>
+    <a class="mobile-book" href="#booking">Book your trip <span>→</span></a>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
